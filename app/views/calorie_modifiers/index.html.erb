@@ -2,6 +2,10 @@
 
 <ul>
   <% @calorie_modifiers.each do |calorie_modifier| %>
-    <%= calorie_modifier.name %>: <%= calorie_modifier.calories %> calories
+    <% if calorie_modifier.is_intake %>
+      <li><%= calorie_modifier.name %>: <%= calorie_modifier.calories %> calories</li>
+    <% else %>
+      <li><%= calorie_modifier.name %>: -<%= calorie_modifier.calories %> calories</li>
+    <% end %>
   <% end %>
 </ul>
