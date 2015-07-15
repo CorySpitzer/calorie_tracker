@@ -11,6 +11,7 @@ gem 'bootstrap-sass', '~> 3.3.5'
 gem 'rest-client'
 gem 'devise'
 gem 'simple_form'
+gem 'will_paginate'
 
 group :development do
   gem 'byebug'
@@ -31,4 +32,6 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'poltergeist'
 end

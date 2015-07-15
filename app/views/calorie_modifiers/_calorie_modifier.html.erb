@@ -1,0 +1,16 @@
+
+<ul>
+  <% @calorie_modifiers.each do |calorie_modifier| %>
+    <% if calorie_modifier.is_intake %>
+      <li>
+        <%= calorie_modifier.name %>: <%= calorie_modifier.calories %> calories
+        <%= link_to "(x)", calorie_modifier, method: :delete, data: {confirm: "Are you sure?"} %>
+      </li>
+    <% else %>
+      <li>
+        <%= calorie_modifier.name %>: -<%= calorie_modifier.calories %> calories
+        <%= link_to "(x)", calorie_modifier, method: :delete, data: {confirm: "Are you sure?"} %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

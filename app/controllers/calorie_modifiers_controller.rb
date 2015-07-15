@@ -1,6 +1,10 @@
 class CalorieModifiersController < ApplicationController
   def index
-    @calorie_modifiers = CalorieModifier.all
+    @calorie_modifiers = CalorieModifier.order("calories").page(params[:page]).per_page 20
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def new
