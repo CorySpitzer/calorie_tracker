@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'displaying the calorie modifiers' do
   it 'loads some after others', js: true do
-    20.times do |n|
+    10.times do |n|
       FactoryGirl.create :food
     end
     running = FactoryGirl.create :exercise
