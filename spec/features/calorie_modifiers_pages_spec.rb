@@ -16,6 +16,6 @@ describe "the path to add a calorie modifier entry" do
     fill_in 'Name', :with => "running"
     fill_in 'Calories', :with => 100
     click_on 'Submit'
-    expect(page).to have_content 'running: 100 calories'
+    expect(page).to have_content 'running: -100 calories'
   end
 end

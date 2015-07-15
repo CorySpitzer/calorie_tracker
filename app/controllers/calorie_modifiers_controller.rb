@@ -16,6 +16,12 @@ class CalorieModifiersController < ApplicationController
     end
   end
 
+  def destroy
+    @calorie_modifier = CalorieModifier.find(params[:id])
+    @calorie_modifier.destroy
+    redirect_to root_path
+  end
+
   private
   def calorie_modifier_params
     params.require(:calorie_modifier).permit(:is_intake, :name, :calories)
