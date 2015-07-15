@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  resources :calorie_modifier
+  root :to => "calorie_modifiers#index"
+  resources :calorie_modifiers
 end

@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'rest-client'
 gem 'devise'
+gem 'simple_form'
 
 group :development do
   gem 'byebug'
