@@ -1,5 +1,6 @@
 class CalorieModifiersController < ApplicationController
   def index
+    sleep
     @calorie_modifiers = CalorieModifier.order('calories').page(params[:page]).per_page(5)
     respond_to do |format|
       format.html
