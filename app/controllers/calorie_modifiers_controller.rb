@@ -14,7 +14,10 @@ class CalorieModifiersController < ApplicationController
   def create
     @calorie_modifier = CalorieModifier.new(calorie_modifier_params)
     if @calorie_modifier.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     else
       render :new
     end

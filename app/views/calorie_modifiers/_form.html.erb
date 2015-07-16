@@ -1,4 +1,4 @@
-<%= simple_form_for(@calorie_modifier) do |f| %>
+<%= simple_form_for(@calorie_modifier), :url => questions_path, :html => { :multipart => true }, :remote => true, :authenticity_token => true do |f| %>
   <%= f.collection_radio_buttons :is_intake, [[true, 'Yes'], [false, 'No']], :first, :last %>
   <%= f.input :name %>
   <%= f.input :calories %>
