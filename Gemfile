@@ -12,6 +12,7 @@ gem 'rest-client'
 gem 'devise'
 gem 'simple_form'
 gem 'will_paginate'
+gem 'momentjs-rails'
 
 group :development do
   gem 'byebug'
