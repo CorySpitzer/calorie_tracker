@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-500.times do
-  CalorieModifier.create(name: 'apple', calories: 50, is_intake: true)
+500.times do |time|
+  CalorieModifier.create(name: ('apple' + time.to_s), calories: 50, is_intake: true)
 end
+
+CalorieModifier.create(name: 'banana', calories: 90, is_intake: true)
